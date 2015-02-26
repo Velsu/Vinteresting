@@ -1,8 +1,34 @@
-$body-bg: #702963;
+$body-bg: #F7E7CE;
 $navbar-default-bg: #3B444B;
+$font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height: 50px;
 $navbar-inverse-link-color: orange;
-$brand-primary: orange;
 $brand-warning: orange;
-$text-color: white;
 $jumbotron-bg: #222;
 @import 'bootstrap';
+
+.center {
+	text-align: center;
+}
+
+.navbar-brand {
+	font-weight: 600;
+}
+
+.round {
+	border-radius: 15%;
+}
+
+.deco:hover {
+	text-decoration: none;
+}
+
+.about-image {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+.h-color {
+	color: white;
+}
