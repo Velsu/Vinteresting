@@ -5,6 +5,7 @@ $navbar-height: 50px;
 $navbar-inverse-link-color: orange;
 $brand-warning: orange;
 $jumbotron-bg: #222;
+$link-hover-decoration: none;
 @import 'bootstrap';
 
 .center {
@@ -19,9 +20,6 @@ $jumbotron-bg: #222;
 	border-radius: 15%;
 }
 
-.deco:hover {
-	text-decoration: none;
-}
 
 .about-image {
 	width: 150px;
