@@ -1,6 +1,9 @@
 <div class="jumbotron center h-color">
-<h1>Welcome to Vinterest!</h1>
-<p><%= link_to "Login", "users/sign_in", class: "btn-warning btn-lg round" %>
-	<%= link_to "Register", "users/sign_up", class: "btn-primary btn-lg round" %>
-</p>
+	<h1>Welcome to Vinterest!</h1>
+	
+<% unless user_signed_in? %>
+	<p><%= link_to "Login", new_user_session_path, class: "btn-warning btn-lg round" %>
+	<%= link_to "Register", new_user_registration_path, class: "btn-primary btn-lg round" %>
+	</p>
+	<% end %>
 </div>

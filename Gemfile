@@ -31,6 +31,7 @@ gem 'bootstrap-sass', '~> 3.3.3'
 #Use devise gem
 gem 'devise', '~> 3.4.1'
 
+#use sqlite3 in development to avoid heroku DB conflicts
 group :development, :test do
 	gem 'sqlite3'
 end
