@@ -1,0 +1,27 @@
+<h1>Listing vins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vins.each do |vin| %>
+      <tr>
+        <td><%= vin.description %></td>
+        <td><%= link_to 'Show', vin %></td>
+        <td><%= link_to 'Edit', edit_vin_path(vin) %></td>
+        <td><%= link_to 'Destroy', vin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vin', new_vin_path %>
