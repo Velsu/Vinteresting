@@ -6,6 +6,7 @@ $navbar-inverse-link-color: orange;
 $brand-warning: orange;
 $jumbotron-bg: #222;
 $link-hover-decoration: none;
+$color: orange;
 @import 'bootstrap';
 
 .center {
@@ -29,4 +30,11 @@ $link-hover-decoration: none;
 
 .h-color {
 	color: white;
+}
+
+.panel,
+.panel > .panel-heading {
+	background-color: #222;
+	color: $color;
+	border-bottom: 1px solid $color;
 }
