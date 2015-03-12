@@ -4,6 +4,7 @@
 </div>
 
 <div class= "panel-body">
+
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-group">
       <%= f.label :email %><br />
@@ -23,14 +24,11 @@
     <% end -%>
 
     <div class="form-group">
-      <%= f.submit "Log in" %>
+      <%= f.submit "Log in", class: "btn btn-warning" %>
     </div>
   <% end %>
-
-
 <div class= "panel-footer">
   <%= render "devise/shared/links" %>
 </div>
 </div>
-
 </div>
