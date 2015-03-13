@@ -14,9 +14,9 @@
     <% @vins.each do |vin| %>
       <tr>
         <td><%= vin.description %></td>
-        <td><%= link_to 'Show', vin %></td>
-        <td><%= link_to 'Edit', edit_vin_path(vin) %></td>
-        <td><%= link_to 'Destroy', vin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', vin, class: "margin" %></td>
+        <td><%= link_to 'Edit', edit_vin_path(vin), class: "margin" %></td>
+        <td><%= link_to 'Destroy', vin, class: "margin", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
