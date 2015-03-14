@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Description</th>
       <th>User's e-mail</th>
       <th></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @vins.each do |vin| %>
       <tr>
+        <td><%= image_tag vin.image.url(:thumb) %></td>
         <td><%= vin.description %></td>
         <td><%= vin.user.email if vin.user %></td>
         <td><%= link_to 'Show', vin, class: "margin" %></td>

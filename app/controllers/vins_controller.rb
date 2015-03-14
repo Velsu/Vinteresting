@@ -24,8 +24,11 @@ class VinsController < ApplicationController
 
   def create
     @vin = current_user.vins.build(vin_params)
-    @vin.save
-    respond_with(@vin)
+    if @vin.save
+      redirect_to @vin, notice: "Vin successfully created"
+    else
+      render action: 'new'
+    end
   end
 
   def update
