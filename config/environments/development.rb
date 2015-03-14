@@ -29,4 +29,7 @@ OmrPinterest::Application.configure do
 
   #required for heroku
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #required for ImageMagick and Paperclip
+  Paperclip.options[:command_path] = "/d/Program Files/ImageMagick-6.9.0-Q16"
 end

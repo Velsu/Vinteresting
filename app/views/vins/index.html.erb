@@ -27,6 +27,6 @@
 </table>
 
 <br>
-<% unless user_signed_in? %>
+<% if user_signed_in? %>
 <%= link_to 'New Vin', new_vin_path %>
 <% end %>

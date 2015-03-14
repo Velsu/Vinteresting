@@ -50,6 +50,6 @@ class VinsController < ApplicationController
     end
 
     def vin_params
-      params.require(:vin).permit(:description)
+      params.require(:vin).permit(:description, :image)
     end
 end
