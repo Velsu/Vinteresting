@@ -5,5 +5,7 @@
   <%= @vin.description %>
 </p>
 
+<% if @vin.user == current_user %>
 <%= link_to 'Edit', edit_vin_path(@vin) %> |
+<% end %>
 <%= link_to 'Back', vins_path %>

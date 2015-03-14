@@ -1,5 +1,7 @@
 class VinsController < ApplicationController
   before_action :set_vin, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
 
   respond_to :html
 
@@ -13,7 +15,7 @@ class VinsController < ApplicationController
   end
 
   def new
-    @vin = Vin.new
+    @vin = current_user.vins.build
     respond_with(@vin)
   end
 
@@ -21,7 +23,7 @@ class VinsController < ApplicationController
   end
 
   def create
-    @vin = Vin.new(vin_params)
+    @vin = current_user.vins.build(vin_params)
     @vin.save
     respond_with(@vin)
   end
@@ -39,6 +41,12 @@ class VinsController < ApplicationController
   private
     def set_vin
       @vin = Vin.find(params[:id])
+    end
+
+    def correct_user
+      @vin = current_user.vins.find_by(id: params[:id])
+      redirect_to vins_path, 
+      notice: "This area is restricted to the owner" if @vin.nil?
     end
 
     def vin_params

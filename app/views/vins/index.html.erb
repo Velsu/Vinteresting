@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Description</th>
+      <th>User's e-mail</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,14 +15,18 @@
     <% @vins.each do |vin| %>
       <tr>
         <td><%= vin.description %></td>
+        <td><%= vin.user.email if vin.user %></td>
         <td><%= link_to 'Show', vin, class: "margin" %></td>
+        <% if vin.user == current_user %>
         <td><%= link_to 'Edit', edit_vin_path(vin), class: "margin" %></td>
         <td><%= link_to 'Destroy', vin, class: "margin", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% unless user_signed_in? %>
 <%= link_to 'New Vin', new_vin_path %>
+<% end %>
