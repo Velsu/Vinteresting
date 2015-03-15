@@ -76,6 +76,6 @@ $color: orange;
 }
 
 a {
-	color: #222;
+	color: $color;
 	font-weight: bold;
 }

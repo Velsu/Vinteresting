@@ -22,6 +22,8 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
+gem 'jquery-turbolinks'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
@@ -34,6 +36,11 @@ gem 'devise', '~> 3.4.1'
 gem 'paperclip', '~> 3.0'
 
 gem 'aws-sdk', '~> 1.20.0'
+
+#Jquery Masonry
+gem 'masonry-rails', '~> 0.2.0 '
+
+gem 'execjs'
 
 #use sqlite3 in development to avoid heroku DB conflicts
 group :development, :test do

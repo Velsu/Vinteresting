@@ -1,34 +1,16 @@
-<h1>Listing vins</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Description</th>
-      <th>User's e-mail</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @vins.each do |vin| %>
-      <tr>
-        <td><%= image_tag vin.image.url(:thumb) %></td>
-        <td><%= vin.description %></td>
-        <td><%= vin.user.email if vin.user %></td>
-        <td><%= link_to 'Show', vin, class: "margin" %></td>
+<div id="vins" class="transitions-enabled">
+  <% @vins.each do |vin| %>
+  <div class="box panel panel-default">
+      <%= image_tag vin.image.url(:medium) %>
+      <div class="panel-body">
+        <%= vin.description %>
+        <%= vin.user.email if vin.user %>
+        <%= link_to 'Show', vin %>
         <% if vin.user == current_user %>
-        <td><%= link_to 'Edit', edit_vin_path(vin), class: "margin" %></td>
-        <td><%= link_to 'Destroy', vin, class: "margin", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-<% if user_signed_in? %>
-<%= link_to 'New Vin', new_vin_path %>
-<% end %>
+        <%= link_to 'Edit', edit_vin_path(vin) %>
+        <%= link_to 'Destroy', vin, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </div>
+    </div>
+  <% end %>
+</div>
