@@ -7,7 +7,7 @@
       <div class="panel-body">
         <p><%= vin.description %></p>
         <p><strong><%= vin.user.name if vin.user %></strong></p>
-        <% if vin.user == current_user %>
+        <% if current_user && (vin.user == current_user) %>
          <div class="actions">
           <%= link_to edit_vin_path(vin) do %>
           <span class="glyphicon glyphicon-edit"></span> Edit
