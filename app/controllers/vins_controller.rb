@@ -6,7 +6,7 @@ class VinsController < ApplicationController
   respond_to :html
 
   def index
-    @vins = Vin.all
+    @vins = Vin.all.order("created_at DESC")
     respond_with(@vins)
   end
 
