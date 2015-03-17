@@ -1,11 +1,21 @@
-<%= image_tag @vin.image.url(:medium) %>
-
-<p>
-  <strong>Description:</strong>
-  <%= @vin.description %>
-</p>
-
-<% if @vin.user == current_user %>
-<%= link_to 'Edit', edit_vin_path(@vin) %> |
-<% end %>
 <%= link_to 'Back', vins_path %>
+
+<div class="row"> 
+	<div class="col-md-offset-2 col-md-8">
+		<div class="panel panel-default">
+			<div class="panel-heading center">
+				<%= image_tag @vin.image.url(:medium) %>
+			</div>
+			
+				<p><%= @vin.description %></p>
+				<p><strong><%= @vin.user.email if @vin.user %></strong></p>
+
+				<% if @vin.user == current_user %>
+				<%= link_to edit_vin_path(@vin) do %>
+				<span class="glyphicon glyphicon-edit"></span> Edit
+				<% end %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

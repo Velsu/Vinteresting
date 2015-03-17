@@ -7,6 +7,7 @@ $brand-warning: orange;
 $jumbotron-bg: #222;
 $link-hover-decoration: none;
 $color: orange;
+@import 'bootstrap-sprockets';
 @import 'bootstrap';
 
 .center {
@@ -31,7 +32,6 @@ $color: orange;
 .h-color {
 	color: white;
 }
-
 .panel,
 .panel-footer,
 .panel > .panel-heading {
@@ -42,10 +42,6 @@ $color: orange;
 
 .panel-footer {
 	border: none;
-}
-
-.panel-footer a {
-	color: $color;
 }
 
 #error_explanation {

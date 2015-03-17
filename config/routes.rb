@@ -2,7 +2,7 @@ OmrPinterest::Application.routes.draw do
   resources :vins
 
   devise_for :users
-  root "pages#home"
+  root "vins#index"
   get "about" => "pages#about"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

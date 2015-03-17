@@ -1,16 +1,23 @@
+<%= render 'pages/home' unless user_signed_in? %>
+
 <div id="vins" class="transitions-enabled">
   <% @vins.each do |vin| %>
   <div class="box panel panel-default">
-      <%= image_tag vin.image.url(:medium) %>
+      <%= link_to image_tag(vin.image.url(:medium)), vin %>
       <div class="panel-body">
-        <%= vin.description %>
-        <%= vin.user.email if vin.user %>
-        <%= link_to 'Show', vin %>
+        <p><%= vin.description %></p>
+        <p><strong><%= vin.user.email if vin.user %></strong></p>
         <% if vin.user == current_user %>
-        <%= link_to 'Edit', edit_vin_path(vin) %>
-        <%= link_to 'Destroy', vin, method: :delete, data: { confirm: 'Are you sure?' } %>
+         <div class="actions">
+          <%= link_to edit_vin_path(vin) do %>
+          <span class="glyphicon glyphicon-edit"></span> Edit
+          <% end %>
+          <%= link_to vin, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <span class="glyphicon glyphicon-trash"></span> Delete
+          <% end %>
+        </div>
       <% end %>
     </div>
-    </div>
+  </div>
   <% end %>
 </div>
