@@ -1,12 +1,12 @@
+$color: orange;
 $body-bg: #F7E7CE;
 $navbar-default-bg: #3B444B;
 $font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height: 50px;
-$navbar-inverse-link-color: orange;
-$brand-warning: orange;
+$navbar-inverse-link-color: $color;
+$brand-warning: $color;
 $jumbotron-bg: #222;
 $link-hover-decoration: none;
-$color: orange;
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 

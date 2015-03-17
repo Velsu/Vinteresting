@@ -6,7 +6,7 @@ class VinsController < ApplicationController
   respond_to :html
 
   def index
-    @vins = Vin.all.order("created_at DESC")
+    @vins = Vin.all.order("created_at DESC").paginate(page: params[:page], per_page: 4)
     respond_with(@vins)
   end
 
