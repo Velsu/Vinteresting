@@ -8,7 +8,7 @@
 			</div>
 			
 				<p><%= @vin.description %></p>
-				<p><strong><%= @vin.user.email if @vin.user %></strong></p>
+				<p><strong><%= @vin.user.name if @vin.user %></strong></p>
 
 				<% if @vin.user == current_user %>
 				<%= link_to edit_vin_path(@vin) do %>
