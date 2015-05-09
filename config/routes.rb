@@ -1,5 +1,10 @@
 OmrPinterest::Application.routes.draw do
-  resources :vins
+  resources :vins do
+    member do
+      put "like", to: "vins#upvote"
+      put "dislike", to: "vins#downvote"
+    end
+  end
 
   devise_for :users
   root "vins#index"

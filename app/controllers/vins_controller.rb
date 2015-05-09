@@ -41,6 +41,18 @@ class VinsController < ApplicationController
     respond_with(@vin)
   end
 
+  def upvote
+    @vin = Vin.find(params[:id])
+    @vin.upvote_by current_user
+    redirect_to root_url
+  end
+
+  def downvote
+    @vin = Vin.find(params[:id])
+    @vin.downvote_from current_user
+    redirect_to root_url
+  end
+
   private
     def set_vin
       @vin = Vin.find(params[:id])

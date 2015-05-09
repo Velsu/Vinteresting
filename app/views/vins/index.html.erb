@@ -7,6 +7,18 @@
       <div class="panel-body">
         <p><%= vin.description %></p>
         <p><strong><%= vin.user.name if vin.user %></strong></p>
+        <div class="btn-group">
++      <%= link_to like_vin_path(vin), method: :put, class: "btn btn-default btn-sm" do %>
++        <span class="glyphicon glyphicon-chevron-up"></span>
++        Upvote
++        <%= vin.get_upvotes.size %>
++      <% end %>
++      <%= link_to dislike_vin_path(vin), method: :put, class: "btn btn-default btn-sm" do %>
++        <span class="glyphicon glyphicon-chevron-down">
++        Downvote
++        <%= vin.get_downvotes.size %>
++      <% end %>
++    </div>
         <% if current_user && (vin.user == current_user) %>
          <div class="actions">
           <%= link_to edit_vin_path(vin) do %>

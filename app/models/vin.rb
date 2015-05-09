@@ -1,4 +1,5 @@
 class Vin < ActiveRecord::Base
+	acts_as_votable
 	belongs_to :user
 
 	has_attached_file :image, 
