@@ -46,6 +46,7 @@ gem 'execjs'
 gem 'will_paginate', '~> 3.0'
 
 gem 'will_paginate-bootstrap'
+gem 'acts_as_votable', '~> 0.10.0'
 
 #use sqlite3 in development to avoid heroku DB conflicts
 group :development, :test do
