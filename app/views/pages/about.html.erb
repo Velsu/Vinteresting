@@ -1,7 +1,19 @@
 <section>
-<div class= "about-profile center round">
-	<%= image_tag("img.JPG", :alt => "Picture", :class => "about-image") %>
-	<h3>Heya, I'm Luke and this is one of many projects on my road to learn Rails</h3>
-	<p>This project is somewhat an attempt to copy Pinterest. I used various gems such as devise for creating users, imagemagick for uploading picture, AWS3 for storing images on external source along with many others gems that were a great help along the way. Whole development process was on a Windows OS so it was a "Rocky Road" but i managed to complete it after many hardships. If You are interesting in following me on my journey to learn Rails, check out my twitter <a href="https://twitter.com/Velsu">@Velsu</a> or my <a href="http://github.com/Velsu">github</a> account.</p>
-</div>
+	<div class= "about-profile center round">
+		<%= image_tag("picture.JPG", width: 180, height: 180, :alt => "Picture", :class => "about-image super-round") %>
+		<h3>Heya, I'm Luke and this is one of many projects on my road to learn Rails</h3>
+		<p>This project is somewhat an attempt to copy Pinterest. I used various gems such as devise for creating users, imagemagick for uploading picture, AWS3 for storing images on external source along with many others gems that were a great help along the way. Whole development process was on a Windows OS so it was a "Rocky Road" but i managed to complete it after many hardships. If You are interesting in following me on my journey to learn Rails, check out my twitter <a href="https://twitter.com/Velsu">@Velsu</a> or my <a href="http://github.com/Velsu">github</a> account.</p>
+			<div class="icons center round">
+				<%= link_to href: 'https://twitter.com/Velsu' do %>
+    				<%= image_tag 'twitter-white.png', width: 50, height: 50, alt: 'twitter icon', class: "icon super-round" %>
+				<% end %>
+				<%= link_to href: 'https://github.com/Velsu' do %>
+    				<%= image_tag 'github-white.png', width: 50, height: 50, alt: 'github icon', class: "icon super-round" %>
+				<% end %>
+					<%= link_to href: 'https://www.facebook.com/profile.php?id=100000761255888' do %>
+    			<%= image_tag 'facebook-white.png', width: 50, height: 50, alt: 'facebook icon', class: "icon super-round" %>
+				<% end %>
+			</div>
+	</div>
 </section>
+

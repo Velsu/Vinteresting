@@ -19,23 +19,25 @@ $link-hover-decoration: none;
 }
 
 .round {
-	border-radius: 5%;
+	border-radius: 3%;
+}
+
+.super-round {
+  border-radius: 50%;
 }
 
 /*styles for the about page*/
 .about-image {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
   margin-top: 10px;
 }
 
 section {
   .about-profile {
-  background-color: #111;
+  background-color: #222;
   font-weight: 500;
   width: 100%;
   padding-bottom: 8px;
+  margin-top: 80px;
 }
     h3 {
     color: $color;
@@ -52,7 +54,18 @@ section {
       }
     }
 
+/* footer */
 
+.icons {
+  margin-top: 120px;
+  .icon {
+    margin-left: 16px;
+    margin-right: 16px;
+    &:hover {
+      background-color: #F7E7CE;
+    }
+  }
+}
 
 
 
