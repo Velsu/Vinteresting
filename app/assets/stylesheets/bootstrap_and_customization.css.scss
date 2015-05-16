@@ -19,15 +19,43 @@ $link-hover-decoration: none;
 }
 
 .round {
-	border-radius: 15%;
+	border-radius: 5%;
 }
 
-//style for image in about page//
+/*styles for the about page*/
 .about-image {
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
+  margin-top: 10px;
 }
+
+section {
+  .about-profile {
+  background-color: #111;
+  font-weight: 500;
+  width: 100%;
+}
+    h3 {
+    color: $color;
+    font-size: 24px;
+    font-family: "Comic Sans MS", Georgia, serif;
+    margin-bottom: 12px;
+  }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #fff;
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+    }
+
+
+
+
+
 
 .h-color {
 	color: white;
@@ -72,3 +100,8 @@ a {
 	font-weight: bold;
   line-height: 1;
 }
+
+.btn-group {
+  margin-left : -14px
+}
+
