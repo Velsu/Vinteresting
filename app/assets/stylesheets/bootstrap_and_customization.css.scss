@@ -35,6 +35,7 @@ section {
   background-color: #111;
   font-weight: 500;
   width: 100%;
+  padding-bottom: 8px;
 }
     h3 {
     color: $color;
@@ -47,8 +48,7 @@ section {
         line-height: 1.5;
         color: #fff;
         font-family: "Trebuchet MS", Helvetica, sans-serif;
-        margin-left: 16px;
-        margin-right: 16px;
+        margin: 16px;
       }
     }
 
