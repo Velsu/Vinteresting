@@ -38,6 +38,7 @@ class VinsController < ApplicationController
 
   def destroy
     @vin.destroy
+    redirect_to root_url, notice: "Vin successfully destroyed"
     respond_with(@vin)
   end
 
