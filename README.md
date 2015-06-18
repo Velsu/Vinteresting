@@ -1,4 +1,5 @@
-# Web Application that allows for picture upload along with short commentary. Similar to Pinterest.
+Vinteresting
+============
 
-
-This is an application sample.
+Basic App similar to Pinteresting created in Ruby on Rails
+-----------
