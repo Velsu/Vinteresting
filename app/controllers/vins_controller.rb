@@ -11,7 +11,6 @@ class VinsController < ApplicationController
   end
 
   def show
-    respond_with(@vin)
   end
 
   def new
@@ -53,6 +52,7 @@ class VinsController < ApplicationController
     @vin.downvote_from current_user
     redirect_to root_url
   end
+
 
   private
     def set_vin
